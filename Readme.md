@@ -26,10 +26,6 @@ Real time meta search engine is a search engine that retrieves real-time results
 
 ![Home](./Previews/homepage.png)
 
-### Search Category
-
-![Search](./)
-
 ### Removal of spam link Category
 
 ![Removal of spam link](./Previews/spamlinkremoval.png)

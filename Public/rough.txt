@@ -1,0 +1,49 @@
+Following are some of the basic Steps that we have figured out 
+in making a working prototype of a Real-Time Meta Search Engine:
+
+1) assign any variable a prefix URL of a search engine to search a Query ($query=_GET['query']):
+    Example :- $google_url = "https://www.google.com/search?q=";
+    1.1) Encode URL if required to ensure stability of URL
+2) Declare a variable to store results obtained form the search engine :
+    2.1) Fetch search details from the Search Engine using function 'file_get_content()' and URL/$query as parameter;
+    2.2) Refine the search results by deleting unnecessary Links and Titles ;
+3) Used Regular Expression offered by function 'preg_replace()' to match and remove Unwanted Styles and Scripts 
+    fetched from the search engine ;
+4) Make all titles from results as hyperlinks Using a matching function and corresponding expressions.
+    4.1) This Removes all the prefixes and suffixes that cause disruption during redirection of pages.
+5) Adhere all the titles to their hyperlinks (URLs) and store it in a array.
+6) Sort the new array containing the titles and links according to the relevance.
+    6.1) Many Sorting Algorithms that are suitable for optimal results can be used;
+7) Display the array of results with suitable styles that looks catchy and Easy to use.
+    
+    
+    $query = $_GET['query'];
+// Search google
+$google_url = "https://www.google.com/search?q=" . urlencode($query);
+$google_results = file_get_contents($google_url);
+// Remove any CSS or JavaScript from the google results
+ preg_replace('/<style\b[^>]*>(.*?)<\/style>/is')
+$google_results = preg_replace('/<script\b[^>]*>(.*?)<\/script>/is', "", $google_results);
+// Get the search result links and titles from the google results
+preg_match_all('/<li class="b_algo"><h2><a href="(.*?)".*?>(.*?)<\/a><\/h2>/', $google_results, $google_matches);
+$google_links = $google_matches[1];
+$google_titles = $google_matches[2];
+// Combine the search result links and titles into an array
+$google_combined_results = array_combine($google_links, $google_titles);
+// Sort the combined search results by title
+asort($google_combined_results);
+$google_sorted_results = $google_combined_results;
+echo "<br><h2><u><b> Real Time Results from  </b></u></h2><br>";
+// Display the sorted search results
+?>
+	<h1>Google : </h1><form method="get" action="search.php" ><button type="submit"> <b>No Results ? </b> Regenerate  Results from google </button></form><br><br>
+<?php
+foreach ($google_sorted_results as $link => $title) {
+    echo "<a href='$link'>$title</a><br>";
+}
+echo "<hr>
+
+
+
+
+

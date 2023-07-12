@@ -1,0 +1,224 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(226, 226, 226);
+}
+
+/*  ************************  Navbar  *************** */
+
+ nav {
+    height: 3.5rem;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* position: fixed;
+    z-index: 100; */
+    width: 100%;
+}
+
+.logo{
+    font-family: sans-serif;
+    font-weight: 700;
+    color: rgb(130, 150, 241);
+    padding-left: 8%;
+    
+}
+nav ul{
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-grow: 1;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: rgb(77, 77, 77);
+}
+.sign-btn{
+    padding: 8px 1rem 8px 1rem;
+    font-weight: 500;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.sign-btn:hover{
+    background-color: rgb(0, 253, 126);
+    color: black;
+    cursor: pointer;
+}
+.sign-btn:active{
+    opacity: 0.7;
+}
+
+
+/*  **************    Main    ************************** */
+
+
+main{
+    /* position: relative; */
+    /* height: 1vh; */
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-left: 100px;
+    font-size: 1.2rem;
+    color: rgb(69, 69, 69);
+}
+.title2{
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-left: 2px;
+    font-size: 1.2rem;
+    color: rgb(69, 69, 69);
+}
+
+.search-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.search-bar{
+    flex-grow: 1;
+    height: 40px;
+    width: 500px;
+    font-size: 1rem;
+    padding-left: 1.5rem;
+    border: 1px solid rgb(206, 206, 206);
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    outline: none;
+}
+
+.search-image{
+    width: 20px;
+
+  
+}
+.search-btn{
+
+    border:none;
+    max-height: 42px;
+    min-height: 42px;
+    margin-left: -1px;
+    border: 1px solid rgb(26, 0, 219);
+    background-color: rgb(0, 213, 255);
+    padding: 0px 15px 5px 15px;
+    border-left: none;
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+}
+
+.search-btn:active{
+    opacity: 0.5;
+}
+.cpy{
+
+    margin-top: 100px;
+    text-align: center;
+    color:crimson;
+}
+.signup-text{
+    background:darkblue;
+    margin-top: 150px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+    color:whitesmoke;
+    width:200px;
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+}
+.rtmse{
+
+    color: greenyellow;
+}
+.signupbox {
+    margin-top: 100px;
+    text-align: center;
+    color:blue;
+}
+.input-bar{
+    flex-grow: 1;
+    height: 40px;
+    width: 500px;
+    font-size: 1rem;
+    padding-left: 1.5rem;
+    border: 1px solid rgb(206, 206, 206);
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    outline: none;
+}
+.signup-button{
+    padding: 8px 1rem 8px 1rem;
+    font-weight: 500;
+    margin-left:170px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.signup-button:hover{
+    background-color: rgb(0, 253, 126);
+    color: black;
+    cursor: pointer;
+}
+
+.reset-form{
+    padding: 8px 1rem 8px 1rem;
+    font-weight: 500;
+    margin-left:10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.phpresults{
+  
+    text-align: center;
+    justify-content: center;
+    background:rgb(255, 164, 52);
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    padding: 0.5px 10px 0.5px 10px;
+}
+.signup-form{
+    background-color: cornflowerblue;
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 5px;
+    text-decoration: aliceblue;
+    justify-content: center;
+}
